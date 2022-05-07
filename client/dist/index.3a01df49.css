@@ -1,0 +1,216 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #c4edf8;
+  font-family: Fredoka One, cursive;
+}
+
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.task__counter {
+  width: 20%;
+  height: 65px;
+  background-color: #75c6db;
+  border-radius: 30px;
+  margin: 0 auto 35px;
+  font-size: 50px;
+}
+
+.modes {
+  justify-content: center;
+  margin: 0 auto 60px;
+  display: flex;
+}
+
+.timer {
+  width: 300px;
+  background-color: #52c3e2;
+  border-radius: 60px;
+  margin: 0 auto 30px;
+  font-size: 50px;
+}
+
+.stop {
+  margin-bottom: 30px;
+}
+
+.task-1__container, .task-2__container, .task-3__container, .task-4__container, .task-5__container {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.task-1, .task-2, .task-3, .task-4, .task-5 {
+  margin-bottom: 40px;
+}
+
+button, input::placeholder {
+  font-family: Fredoka One, cursive;
+}
+
+input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.modes button {
+  height: 40px;
+  width: 300px;
+  background-color: #52c3e2;
+  border: none;
+  border-radius: 60px;
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.stop {
+  width: 350px;
+  background-color: #52c3e2;
+  border: none;
+  border-radius: 60px;
+  margin: 0 auto 30px;
+  font-size: 35px;
+}
+
+.reset__button {
+  width: 50px;
+  height: 50px;
+  background-color: #52c3e2;
+  background-image: url("reset.fe2d14ab.png");
+  background-size: cover;
+  border: none;
+  border-radius: 60px;
+  margin-bottom: 25px;
+}
+
+.confirm-1, .confirm-2, .confirm-3, .confirm-4, .confirm-5 {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #52c3e2;
+  border: none;
+  border-radius: 60px;
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+button:hover {
+  opacity: .5;
+  transition: all .4s;
+}
+
+.task-first, .task-second, .task-third, .task-fourth, .task-fifth {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  padding-top: 5px;
+}
+
+.what__task-1, .what__task-2, .what__task-3, .what__task-4, .what__task-5 {
+  height: 40px;
+  width: 350px;
+  border: none;
+  border-radius: 60px;
+  padding-left: 20px;
+}
+
+.window {
+  width: 70%;
+  height: 400px;
+  opacity: .9;
+  background-color: #227395;
+  border: 5px solid #000;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.window__content {
+  color: #fff;
+  margin: 35px auto 0;
+  font-size: 30px;
+}
+
+.window__button {
+  width: 25%;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 30px;
+  margin-top: 125px;
+}
+
+.timer__container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.window__tasks {
+  width: 70%;
+  height: 300px;
+}
+
+.timer__container button {
+  width: 30px;
+  height: 30px;
+  background-image: url("play.584accfa.png");
+  background-size: cover;
+  background-color: inherit;
+  border: none;
+}
+
+.timer__container {
+  justify-content: center;
+  display: flex;
+}
+
+.timer__container div {
+  margin-right: 50px;
+}
+
+.window__tasks {
+  width: 70%;
+  height: 400px;
+  opacity: .95;
+  background-color: #227395;
+  border: 5px solid #000;
+  border-radius: 30px;
+  position: absolute;
+  top: 500px;
+  left: 0;
+}
+
+.time-select {
+  width: 30%;
+  height: 25px;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 120px;
+  font-family: inherit;
+  font-size: 25px;
+}
+
+.confirm__button {
+  width: 25%;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 30px;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */

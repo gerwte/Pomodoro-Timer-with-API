@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.3a01df49.css">
+    <script src="/index.8cfc62b9.js" defer=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- <link type="image/x-icon" href="icon.ico"> -->
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pomodoro Timer</h1>
+        <div class="task__counter">0</div>
+        <div class="modes">
+            <button class="work">Work</button>
+            <button class="break">Break</button>
+            <button class="long__break">Long Break</button>
+        </div>
+        <div class="timer">00:00</div>
+        <button class="stop">Stop</button><br>
+        <button class="reset__button"></button>
+        <div class="all-tasks">
+            <div class="task-1">
+                <div class="task-1__container">
+                    <input type="text" class="what__task-1" placeholder="Enter your tasks">
+                    <button class="confirm-1">+</button>
+                </div>
+                    <div class="task-first"></div>
+                    <div class="timer__container">
+                        <div class="first__timer">00:00</div>
+                        <button class="play__button__first"></button>
+                    </div>
+            </div>
+            <div class="task-2">
+                <div class="task-2__container">
+                    <input type="text" class="what__task-2" placeholder="Enter your tasks">
+                    <button class="confirm-2">+</button>
+                </div>
+                    <div class="task-second"></div>
+                    <div class="timer__container">
+                        <div class="second__timer">00:00</div> 
+                        <button class="play__button__second"></button>
+                    </div>
+            </div>
+            <div class="task-3">
+                <div class="task-3__container">  
+                    <input type="text" class="what__task-3" placeholder="Enter your tasks">
+                    <button class="confirm-3">+</button>
+                </div>
+                    <div class="task-third"></div>
+                    <div class="timer__container">
+                        <div class="third__timer">00:00</div>    
+                        <button class="play__button__third"></button>
+                    </div>
+            </div>
+            <div class="task-4">
+                <div class="task-4__container">
+                    <input type="text" class="what__task-4" placeholder="Enter your tasks">
+                    <button class="confirm-4">+</button>
+                </div>
+                    <div class="task-fourth"></div>
+                    <div class="timer__container">
+                        <div class="fourth__timer">00:00</div>
+                            <button class="play__button__fourth"></button>
+                    </div>
+            </div>
+            <div class="task-5">
+                <div class="task-5__container">
+                    <input type="text" class="what__task-5" placeholder="Enter your tasks">
+                    <button class="confirm-5">+</button>
+                </div>
+                    <div class="task-fifth"></div>
+                    <div class="timer__container">
+                        <div class="fifth__timer">00:00</div>   
+                            <button class="play__button__fifth"></button>
+                    </div>
+            </div>
+        </div>
+        <dialog class="window">
+            <div class="window__content"></div>
+            <button class="window__button">CLOSE</button>
+        </dialog>
+        <dialog class="window__tasks">
+            <p class="time-selector__text">How much time are you going to spend for this task?</p>
+                <input type="number" class="time-select" min="15" max="120"><span class="min"> minutes</span>
+            <br>
+            <button class="confirm__button">Let's start</button>
+        </dialog>
+</div></body>
+</html>
