@@ -11,12 +11,7 @@ app.get('/posts', cors(), function (req, res, next) {
     res.json({msg: 'This is CORS-enabled for a Single Route'})
 });
 
-app.use(
-    createProxyMiddleware({
-      target: 'http://localhost:1234',
-      changeOrigin: true,
-      pathFilter: '/api/proxy-only-this-path',
-    }));
+
 
 
 // Import Routes

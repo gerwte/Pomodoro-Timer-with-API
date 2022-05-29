@@ -1,4 +1,5 @@
-import axios from 'axios';
+'use strict'
+
 let buttons = document.querySelectorAll('.modes > button');
 let timeShow = document.querySelector('.timer');
 let taskTextOne = document.querySelector('.what__task-1');
@@ -25,16 +26,16 @@ let closeButton = document.querySelector('.window__button');
 let [workButton, breakButton, longBreakButton] = buttons;
 let windowTime = document.querySelector('.window__tasks');
 
-axios.post('http:/localhost:3000/posts', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-});
+// axios.post('http:/localhost:3000/posts', {
+//     firstName: 'Fred',
+//     lastName: 'Flintstone'
+//   })
+//   .then(function (response) {
+//     console.log(response);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+// });
 
 
 // Работа с тасками
@@ -77,185 +78,22 @@ function taskCounterFive() {
 let timeCounter = document.querySelector('.time-select');
 let confirmButton = document.querySelector('.confirm__button');
 
-// Таск 1
-taskButtonOne.onclick = () => {
-    let task = taskTextOne.value;
-    taskFieldOne.innerHTML = task;
-    taskTextOne.value = '';
-    taskFieldOne.style.textDecoration = 'none';
-    windowTime.show();
-    confirmButton.onclick = () => {
-        windowTime.close();
-        document.querySelector('.first__timer').innerHTML = `${timeCounter.value}:00`
-    }
+// Работа с тасками
+
+let tasks = []
+
+
+
+
+document.querySelector('.task__button').onclick = () => {
+    // let value = document.querySelector('.task__input').value
+    // tasks.push = value;
+    // let div = document.createElement('div')
+    // div.className = "task"
+    // div.innerHTML = `${tasks}`
+    // document.body.append(div)
+
 }
-document.querySelector('.play__button__first').onclick = () => {
-    let timeSelected = timeCounter.value * 60;
-        let countTimer = setInterval(function () {
-            let seconds = timeSelected%60;
-            let minutes = timeSelected/60%60;
-            let hour = timeSelected/60/60%60;
-            let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
-            if (timeSelected <= 0) {
-                clearInterval(countTimer);
-            } else {
-                document.querySelector('.first__timer').innerHTML = strTimer;
-                timeSelected = timeSelected - 1;
-            }
-            taskFieldOne.onclick = () => {
-                taskCounterOne();
-                clearInterval(countTimer);
-                document.querySelector('.first__timer').innerHTML = '00:00';
-            };
-        }, 1000)
-};
-
-
-
-
-// Таск 2
-taskButtonTwo.onclick = () => {
-    let task = taskTextTwo.value;
-    taskFieldTwo.innerHTML = task;
-    taskTextTwo.value = '';
-    taskFieldTwo.style.textDecoration = 'none';
-    windowTime.show();
-    confirmButton.onclick = () => {
-        windowTime.close();
-        document.querySelector('.second__timer').innerHTML = `${timeCounter.value}:00`;
-    }
-}
-
-document.querySelector('.play__button__second').onclick = () => {
-    let timeSelected = timeCounter.value * 60;
-    let countTimer = setInterval(function () {
-        let seconds = timeSelected%60;
-        let minutes = timeSelected/60%60;
-        let hour = timeSelected/60/60%60;
-        if (timeSelected <= 0) {
-            clearInterval(countTimer);
-        } else {
-            let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
-            document.querySelector('.second__timer').innerHTML = strTimer;
-        }
-        timeSelected = timeSelected - 1;
-
-        taskFieldTwo.onclick = () => {
-            taskCounterTwo();
-            clearInterval(countTimer);
-            document.querySelector('.second__timer').innerHTML = '00:00'
-        }
-    }, 1000)
-};
-    
-
-
-
-
-// Таск 3
-taskButtonThree.onclick = () => {
-    let task = taskTextThree.value;
-    taskFieldThree.innerHTML = task;
-    taskTextThree.value = '';
-    taskFieldThree.style.textDecoration = 'none';
-    windowTime.show();
-    confirmButton.onclick = () => {
-        windowTime.close();
-        document.querySelector('.third__timer').innerHTML = `${timeCounter.value}:00`;
-    }
-};
-
-document.querySelector('.play__button__third').onclick = () => {
-    let timeSelected = timeCounter.value * 60;
-        let countTimer = setInterval(function () {
-            let seconds = timeSelected%60;
-            let minutes = timeSelected/60%60;
-            let hour = timeSelected/60/60%60;
-            let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
-            if (timeSelected <= 0) {
-                clearInterval(countTimer);
-            } else {
-                document.querySelector('.third__timer').innerHTML = strTimer;
-                timeSelected = timeSelected - 1;
-            }
-            taskFieldThree.onclick = () => {
-                taskCounterThree();
-                clearInterval(countTimer);
-                document.querySelector('.third__timer').innerHTML = '00:00'
-            }
-        }, 1000)
-};
-
-
-
-
-// Таск 4
-taskButtonFour.onclick = () => {
-    let task = taskTextFour.value;
-    taskFieldFour.innerHTML = task;
-    taskTextFour.value = '';
-    taskFieldFour.style.textDecoration = 'none';
-    windowTime.show();
-    confirmButton.onclick = () => {
-        windowTime.close();
-        document.querySelector('.fourth__timer').innerHTML = `${timeCounter.value}:00`;
-    }
-}
-document.querySelector('.play__button__fourth').onclick = () => {
-    let timeSelected = timeCounter.value * 60;
-        let countTimer = setInterval(function () {
-            let seconds = timeSelected%60;
-            let minutes = timeSelected/60%60;
-            let hour = timeSelected/60/60%60;
-            let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
-            if (timeSelected <= 0) {
-                clearInterval(countTimer);
-            } else {
-                document.querySelector('.fourth__timer').innerHTML = strTimer;
-                timeSelected = timeSelected - 1;
-            }
-            taskFieldFour.onclick = () => {
-                taskCounterFour();
-                clearInterval(countTimer);
-                document.querySelector('.fourth__timer').innerHTML = '00:00'
-            }
-        }, 1000);
-}
-
-
-
-// Таск 5
-taskButtonFive.onclick = () => {
-    let task = taskTextFive.value;
-    taskFieldFive.innerHTML = task;
-    taskTextFive.value = '';
-    taskFieldFive.style.textDecoration = 'none';
-    windowTime.show();
-    confirmButton.onclick = () => {
-        windowTime.close();
-        document.querySelector('.fifth__timer').innerHTML = `${timeCounter.value}:00`;
-    }
-}
-document.querySelector('.play__button__fifth').onclick = () => {
-    let timeSelected = timeCounter.value * 60;
-        let countTimer = setInterval(function () {
-            let seconds = timeSelected%60;
-            let minutes = timeSelected/60%60;
-            let hour = timeSelected/60/60%60;
-            if (timeSelected <= 0) {
-                clearInterval(countTimer);
-            } else {
-                let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
-                document.querySelector('.fifth__timer').innerHTML = strTimer;
-            }
-            timeSelected = timeSelected - 1;
-            taskFieldFive.onclick = () => {
-                taskCounterFive();
-                clearInterval(countTimer);
-                document.querySelector('.fifth__timer').innerHTML = '00:00'
-            }
-        }, 1000)
-};
 
 
 
@@ -303,8 +141,8 @@ function breakReminder() {
 workButton.onclick = () => {
     watcherTimer = {name: workTimer, timeCount:timeWork} 
     workTimer = setInterval(function () {
-        let seconds = timeWork % 60 // секунды
-        let minutes = timeWork / 60 % 60 // минуты
+        let seconds = timeWork %60// секунды
+        let minutes = timeWork/60%60 // минуты
         if (timeWork <= 0) {
             clearInterval(workTimer);
             soundPlay();
@@ -318,7 +156,7 @@ workButton.onclick = () => {
             clearInterval(workTimer);
         }
     }, 1000)
-}
+};
 
 // Таймер короткого перерыва 
 breakButton.onclick = () => {
@@ -330,8 +168,6 @@ breakButton.onclick = () => {
             // breakTimer.reset;
             clearInterval(breakTimer);
             soundPlay();
-            // breakTimer();
-            // Выдает ошибку в консоли о том, что breakTimer - не функция
         } else {
             let strTimer = `${Math.trunc(minutes)}:${seconds}`;
             timeShow.innerHTML = strTimer;
